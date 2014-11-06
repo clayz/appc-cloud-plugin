@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.clay.phonegap.plugin.appccloud"
+        version="1.0.0">
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+
+    <name>AppCCloudPlugin</name>
+    <description>Plugin for supporting appc cloud ad on Android and iOS.</description>
+    <author>Clay Zhong</author>
+    <keywords>appc,ad</keywords>
+    <license>Apache 2.0 License</license>
+
+    <js-module src="appccloud.js" name="AppCCloud">
+        <clobbers target="window.plugins.appccloud"/>
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AppCCloud">
+                <param name="android-package" value="com.clay.phonegap.plugin.appccloud"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/AppCCloud.java" target-dir="src/com/clay/phonegap/plugin"/>
+    </platform>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="AppCCloud">
+                <param name="ios-package" value="CDVAppCCloud"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVAppCCloud.h"/>
+        <source-file src="src/ios/CDVAppCCloud.m"/>
+    </platform>
+
+</plugin>
