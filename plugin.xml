@@ -25,17 +25,18 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/AppCCloud.java" target-dir="src/com/clay/phonegap/plugin"/>
+        <source-file src="lib/appc_cloud_2.2.0.jar" target-dir="libs" framework="true"/>
+        <source-file src="src/android/AppCCloudPlugin.java" target-dir="src/com/clay/phonegap/plugin"/>
     </platform>
 
-    <platform name="ios">
-        <config-file target="config.xml" parent="/*">
-            <feature name="AppCCloud">
-                <param name="ios-package" value="CDVAppCCloud"/>
-            </feature>
-        </config-file>
-        <header-file src="src/ios/CDVAppCCloud.h"/>
-        <source-file src="src/ios/CDVAppCCloud.m"/>
-    </platform>
+    <!--<platform name="ios">-->
+    <!--<config-file target="config.xml" parent="/*">-->
+    <!--<feature name="AppCCloud">-->
+    <!--<param name="ios-package" value="CDVAppCCloud"/>-->
+    <!--</feature>-->
+    <!--</config-file>-->
+    <!--<header-file src="src/ios/CDVAppCCloud.h"/>-->
+    <!--<source-file src="src/ios/CDVAppCCloud.m"/>-->
+    <!--</platform>-->
 
 </plugin>
