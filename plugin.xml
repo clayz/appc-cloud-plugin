@@ -15,7 +15,7 @@
     <license>Apache 2.0 License</license>
 
     <js-module src="www/appccloud.js" name="AppCCloud">
-        <clobbers target="window.plugins.appccloud"/>
+        <clobbers target="window.appccloud"/>
     </js-module>
 
     <platform name="android">

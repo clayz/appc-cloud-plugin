@@ -1,4 +1,4 @@
-package android;
+package com.clay.phonegap.plugin;
 
 import net.app_c.cloud.sdk.AppCCloud;
 import org.apache.cordova.*;
