@@ -1,8 +1,8 @@
 var appccloud = {
-    listView: function() {
+    listView: function(success, failure) {
         cordova.exec(
-            successCallback,
-            failureCallback,
+            success,
+            failure,
             'AppCCloud',
             'listView',
             []);
