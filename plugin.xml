@@ -14,7 +14,7 @@
     <keywords>appc,ad</keywords>
     <license>Apache 2.0 License</license>
 
-    <js-module src="appccloud.js" name="AppCCloud">
+    <js-module src="www/appccloud.js" name="AppCCloud">
         <clobbers target="window.plugins.appccloud"/>
     </js-module>
 
