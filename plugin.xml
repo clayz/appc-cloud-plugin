@@ -21,7 +21,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="AppCCloud">
-                <param name="android-package" value="com.clay.phonegap.plugin"/>
+                <param name="android-package" value="com.clay.phonegap.plugin.appccloud"/>
             </feature>
         </config-file>
 
