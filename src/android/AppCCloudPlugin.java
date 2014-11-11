@@ -29,11 +29,18 @@ public class AppCCloudPlugin extends CordovaPlugin {
     }
 
     private PluginResult executeCreateListView(final CallbackContext callbackContext) {
+        if (this.appCCloud == null) {
+            // appC cloud生成
+            appCCloud = new AppCCloud(cordova.getActivity()).start();
+        }
 
-        // appC cloud生成
-        appCCloud = new AppCCloud(cordova.getActivity()).start();
-        // 広告リストビュー呼び出し
-        appCCloud.Ad.callWebActivity();
+        cordova.getThreadPool().execute(new Runnable() {
+            @Override
+            public void run() {
+                // 広告リストビュー呼び出し
+                appCCloud.Ad.callWebActivity();
+            }
+        });
 
         return null;
     }
