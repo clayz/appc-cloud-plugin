@@ -17,7 +17,6 @@
         <engine name="cordova" version=">=3.0.0"/>
     </engines>
 
-
     <js-module src="www/appccloud.js" name="AppCCloud">
         <clobbers target="window.appccloud"/>
     </js-module>
@@ -83,14 +82,18 @@
         <source-file src="src/android/AppCCloudPlugin.java" target-dir="src/com/clay/phonegap/plugin/appccloud"/>
     </platform>
 
-    <!--<platform name="ios">-->
-    <!--<config-file target="config.xml" parent="/*">-->
-    <!--<feature name="AppCCloud">-->
-    <!--<param name="ios-package" value="CDVAppCCloud"/>-->
-    <!--</feature>-->
-    <!--</config-file>-->
-    <!--<header-file src="src/ios/CDVAppCCloud.h"/>-->
-    <!--<source-file src="src/ios/CDVAppCCloud.m"/>-->
-    <!--</platform>-->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="AppCCloud">
+                <param name="ios-package" value="AppCCloud"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/AppCCloud.h"/>
+        <source-file src="src/ios/AppCCloud.m"/>
+
+        <framework src="src/ios/appc_cloud_2.0.0_x6" custom="true"/>
+        <framework src="CoreTelephony.framework"/>
+        <framework src="StoreKit.framework"/>
+    </platform>
 
 </plugin>
